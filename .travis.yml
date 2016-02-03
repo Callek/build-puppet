@@ -6,6 +6,9 @@ script:
   #- "ln -s manifests/moco-config.pp manifests/config.pp"
   #- "ln -s manifests/moco-nodes.pp manifests/nodes.pp"
   - "puppet parser validate `find modules -name '*.pp'`"
+  - "for file in $(find . -iname '*.erb'); \
+      do erb -P -x -T '-' $file | ruby -c || exit 1; \
+      done;"
   - "puppet-lint --no-arrow_alignment-check --no-80chars-check \
       --no-documentation-check --no-double_quoted_strings-check \
       --no-variable_scope-check --no-case_without_default-check \
