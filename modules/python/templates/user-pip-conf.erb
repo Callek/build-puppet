@@ -8,5 +8,5 @@ find-links = <%- @user_python_repositories.each do |rep| %>
     <%= rep -%>
 <%- end %>
 trusted-host = <%- @user_python_repositories.each do |rep| %>
-    <%= regsubst(rep, '^https?\:\/\/([^/]*)/?', '\1') -%>
+    <%= ::regsubst(rep, '^https?\:\/\/([^/]*)/?', '\1') -%>
 <%- end %>
