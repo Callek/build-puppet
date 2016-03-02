@@ -26,7 +26,7 @@ gemfile: .gemfile
 notifications:
   irc:
     channels:
-      - secure: "DlqdA6eYvBRFOLIUnOs38nzy61g20+bu1OyiANIcm0U7e9lRNZNMnmTqG2F8YmzgJgnWfQeogkpF2tsFVAVMuXeRIfC9xSbsCE4oWucScp5SJiOvp68284/jpEhCZWAscer3J+9F5Md+voW4foteAY70GPms1xNJkfy1gs2UZKs="
+      - "irc.mozilla.org#releng"
     on_success: always
     on_failure: always
     template:
